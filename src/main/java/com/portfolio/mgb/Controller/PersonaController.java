@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = {"https://pmffrontend.web.app/","http://localhost:4200"})
+@CrossOrigin(origins = {"https://pmffrontend.web.app","http://localhost:4200"})
 public class PersonaController {
 
     @Autowired
     IPersonaService ipersonaService;
 
-    @GetMapping("personas/traer")
+    @GetMapping("/personas/traer")
     public List<Persona> getPersona() {
         return ipersonaService.getPersona();
     }
